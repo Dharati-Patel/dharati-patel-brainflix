@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.scss';
 import NavigationBar from './components/NavigationBar/NavigationBar';
 import Hero from './components/Hero/Hero';
+import Main from './components/Main/Main';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <>
       <NavigationBar />
       <Hero {...details}/>
+      <Main />
     </>
   )
 }
