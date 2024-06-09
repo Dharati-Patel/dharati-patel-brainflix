@@ -9,7 +9,6 @@
         margin: 1rem;
 
         @include tablet {
-       //     height: 5rem;
             display: flex;
             align-items: center;
             margin: 0 1.5rem;
@@ -126,9 +125,9 @@
         }
 
         &--avatar {
-            height: 3rem;
-            width: 3rem;
-            margin: 0.5rem 0 0 0;
+            height: 2.5rem;
+            width: 2.5rem;
+            margin: 1rem 0 0 0;
             background-image: url("../../assets/images/Mohan-muruge.jpg");
             background-position: left;
             background-size: cover;
