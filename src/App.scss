@@ -14,7 +14,14 @@ html, body {
     box-sizing: inherit;
 }
 
+@include desktop {
+    .main__container--box {
+        display: flex;
+    }
+}
 
-h1{
-    color: $BrainFlix-Blue;
+@include desktop {
+    .main__container--box-first {
+        border-right: 1px $silver solid;
+    }
 }

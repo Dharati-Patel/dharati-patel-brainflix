@@ -5,21 +5,26 @@ import NavigationBar from './components/NavigationBar/NavigationBar';
 import Hero from './components/Hero/Hero';
 import Main from './components/Main/Main';
 import Comments from './components/Comments/Comments';
+import SideVideoBar from './components/SideVideoBar/SideVideoBar';
 
 function App() {
- //console.log(details[1].comments[0].name);
 
  const videoDetails = details[0];
   return (
-    <>
+    <div className="main__container"> 
       <NavigationBar />
       <Hero {...details}/>
-      <Main />
-      <Comments comments={videoDetails.comments}/>
-
-      
-    </>
+      <div className="main__container--box">
+        <div className="main__container--box-first">
+          <Main />
+          <Comments comments={videoDetails.comments}/>
+        </div>
+        <div className="main__container--box-second">
+          <SideVideoBar details={details} />
+        </div>
+      </div>
+    </div>
   )
 }
 
-export default App
+export default App;

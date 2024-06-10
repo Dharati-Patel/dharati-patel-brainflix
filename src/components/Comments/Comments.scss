@@ -4,16 +4,16 @@
 
 .comment {
     background-color: $white;
-    margin: 0 0 1.5rem 1rem;
+    margin: 0 1rem 1.5rem 1rem;
 
     @include tablet {
         margin: 1.5rem;
     }
 
     @include desktop {
-        margin: 0 8rem;
-        width: 55vw;
-        border-right: 1px solid $mercury;
+        margin: 0 0 0 8rem;
+        width: 50vw;
+      //  border-right: 1px solid $mercury;
     }
 
     &__title {
@@ -24,7 +24,7 @@
         margin: 0 0 1rem 0;
 
         @include desktop {
-            padding-top: 1.5rem;
+            padding-top: 1rem;
         }
     }
 
@@ -107,7 +107,7 @@
                 }
 
                 @include desktop {
-                    width: 34vw;
+                    width: 28vw;
                 }
 
             }
@@ -127,7 +127,7 @@
             }
 
             @include desktop {
-                width: 13vw;
+                width: 14vw;
                 margin-right: 1rem;
             }
 
@@ -208,6 +208,7 @@
 
                 @include desktop {
                     margin-right: 1rem;
+                    margin-bottom: 1rem;
                 }
             }
         }
