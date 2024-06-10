@@ -1,0 +1,76 @@
+@import '../../styles/partials/colors';
+@import '../../styles/partials/fonts';
+@import '../../styles/partials/mixins';
+
+.sideVideoBar {
+    margin: 1.5rem 1rem;
+
+    @include tablet {
+        margin: 1.5rem;
+    }
+
+    @include desktop {
+        margin-right: 128px;
+        margin-left: 1rem;
+    }
+
+    &__title {
+        font-family: "AvenirNext_demi", sans-serif;
+        font-size: .875rem;
+        line-height: 1.25rem;
+        color: $silver;
+        margin: 0 0 1rem 0;
+    }
+
+    &__container {
+        &--box {
+            display: flex;
+            margin-bottom: 1rem;
+            padding: 0;
+        }
+
+        &--image {
+            width: 40vw;
+            height: 9vh;
+            margin-right: 1rem;
+            object-fit: cover;
+            border-radius: 0.3125rem;
+            padding: 0;
+
+            @include tablet {
+                width: 16vw;
+            }
+
+            @include desktop {
+                width: 9vw;
+                height: 7vh;
+            }
+        }
+
+        &--text {
+            
+            &-title {
+                font-family: "AvenirNext_demi", sans-serif;
+                font-size: .8125rem;
+                line-height: 1.125rem;
+                color: $BrainFlix-Black;
+                margin: 0 0 1.5rem 0;
+
+                @include tablet {
+                    margin: 0 0 2.5rem 0;
+                }
+                @include desktop {
+                    margin: 0 0 1.5rem 0;
+                }
+            }
+
+            &-channel {
+                font-family: "AvenirNext_regular", sans-serif;
+                font-size: .8125rem;
+                line-height: 1.125rem;
+                color: $BrainFlix-Black;
+                margin: 0;
+            }
+        }
+    }
+}

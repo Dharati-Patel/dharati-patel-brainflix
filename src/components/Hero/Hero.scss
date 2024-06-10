@@ -1,0 +1,39 @@
+@import '../../styles/partials/colors';
+@import '../../styles/partials/fonts';
+@import '../../styles/partials/mixins';
+
+.hero {
+    margin: 1rem 0;
+    height: 30vh;
+    width: 100vw;
+
+    @include tablet {
+      background-color: $BrainFlix-DarkBlack;
+      text-align: center;
+      height: 50vh;
+    }
+
+    @include desktop {
+      height: 50vh;
+    }
+
+    &__video {
+      width: 100vw;
+      height: 30vh;
+      object-fit: cover;
+
+      @include tablet {
+        width: 90vw;
+        height: 50vh;
+      }
+
+      @include desktop {
+        width: 60vw;
+        height: 50vh;
+      }
+
+      &:focus {
+        outline-width: 0;
+      }
+    }
+  }

@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import details from './data/video-details.json';
+import { useState } from 'react';
+import './App.scss';
+import NavigationBar from './components/NavigationBar/NavigationBar';
+import Hero from './components/Hero/Hero';
+import Main from './components/Main/Main';
+import Comments from './components/Comments/Comments';
+import SideVideoBar from './components/SideVideoBar/SideVideoBar';
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [videoDetails, setVideoDetails] = useState(details[0]);
+  const changevideoDetails = (idPassed) => {
+    const foundVideo = details.find((detail) => {
+      return detail.id === idPassed;
+    });
+
+    setVideoDetails(foundVideo);
+  };
+
+  const filterDetails = details.filter((detail) => {
+    return detail.id !== videoDetails.id;
+  });
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="main__container"> 
+      <NavigationBar />
+      <Hero videoDetails={videoDetails}/>
+      <div className="main__container--box">
+        <div className="main__container--box-first">
+          <Main videoDetails={videoDetails}/>
+          <Comments comments={videoDetails.comments}/>
+        </div>
+        <div className="main__container--box-second">
+          <SideVideoBar details={filterDetails} changevideoDetails={changevideoDetails}  />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
-export default App
+export default App;

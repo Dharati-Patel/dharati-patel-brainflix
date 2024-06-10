@@ -1,0 +1,150 @@
+@import '../../styles/partials/colors';
+@import '../../styles/partials/fonts';
+@import '../../styles/partials/mixins';
+
+.header {
+    background-color: $white;
+
+    &__navigation {
+        margin: 1rem;
+
+        @include tablet {
+            display: flex;
+            align-items: center;
+            margin: 0 1.5rem;
+        }
+
+        @include desktop {
+           margin: 0 8rem;
+        }
+
+        &--container {
+            display: flex;
+            justify-content: center;
+            height: 2rem;
+
+            @include tablet {
+                margin: 1rem 0;
+                padding-right: 3.75rem;
+            }
+
+            @include desktop {
+                padding-right: 330px;
+            }
+        }
+
+        &--box {
+            display: flex;
+        }
+
+        &--search {
+            display: flex;
+            align-items: center;
+            border: 1px solid $mercury;
+            background-color: $alabaster;
+            border-radius: 0.25rem;
+            height: 2.5rem;
+            margin: 1rem 1rem 0 0;
+            width: 80vw;
+
+            @include tablet {
+                margin: 1rem 0;
+                width: 30vw;
+            }
+
+            @include desktop {
+                width: 20vw;
+                margin-right: 0.5rem;
+            }
+
+            &-image {
+                padding: 0 1rem 0 1rem;
+            }
+
+            &-text {
+                font-family:"AvenirNext_regular", sans-serif;
+                font-size: .875rem;
+                line-height: 1.125rem;
+            }
+        }
+
+        &--upload {
+            display: flex;
+            width: 95vw;
+
+            @include tablet {
+                margin: 0 0 0 1rem;
+            }
+
+            &-container {
+                display: flex;
+                width: 99vw;
+                height: 3rem;
+                background-color: $BrainFlix-Blue;
+                margin: 1rem 1rem 0 0;
+                border-radius: 0.25rem;
+                justify-content: left;
+                align-items: center;
+
+                &:hover {
+                    background-color: $BrainFlix-DarkBlue;
+                }
+
+                @include tablet {
+                    width: 26vw;
+                    height: 2.5rem;
+                    margin-top: 0;
+                }
+                @include desktop {
+                    margin-right: 0.5rem;
+                    width: 15vw;
+                }
+
+                &-image {
+                    padding: 0 25vw 0 3vw;
+
+                    @include tablet {
+                        padding: 0 5vw 0 2vw;
+                    }
+                    @include desktop {
+                        padding: 0 2.5vw 0 1vw;
+                    }
+                }
+
+                &-text {
+                    font-family:"AvenirNext_regular", sans-serif;
+                    font-size: .875rem;
+                    line-height: 1.125rem;
+                    color: $white;
+                    margin: 0;
+                    justify-content: center; 
+                }
+            }
+        }
+
+        &--avatar {
+            height: 2.5rem;
+            width: 2.5rem;
+            margin: 1rem 0 0 0;
+            background-image: url("../../assets/images/Mohan-muruge.jpg");
+            background-position: left;
+            background-size: cover;
+            border-radius: 2rem;
+
+            @include tablet {
+                position: absolute;
+                height: 2.5rem;
+                width: 2.5rem;
+                right: 3%;
+                margin-top: 1rem;
+            }
+
+            @include desktop {
+                right: 10%;
+                height: 2.5rem;
+                width: 2.5rem;
+            }
+        }
+    }
+}
+
