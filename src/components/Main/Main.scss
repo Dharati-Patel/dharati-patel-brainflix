@@ -34,6 +34,7 @@
             margin: 0 0 1rem 0;
             border-top: 1px solid $mercury; 
             border-bottom: 1px solid $mercury;
+            justify-content: space-between;
 
             @include tablet {
                 border-top: none;
@@ -63,6 +64,7 @@
                     @include tablet {
                         font-size: 1rem;
                         line-height: 1.5rem;
+                        
                     }
                     @include desktop {
                         padding-right: 1.5vw;
@@ -76,12 +78,11 @@
                     color: $silver;
                     margin: 1rem 0;
                     @include tablet {
-                        margin: 0 37.8vw 0 0;
+                       margin: 0 30vw 0 0;
                     }
 
                     @include desktop {
-                        margin: 0;
-                        padding: 0 15vw 0 0;
+                        margin: 0 10vw 0 0;
                     }
                 }
             }

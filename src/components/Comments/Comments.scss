@@ -13,7 +13,6 @@
     @include desktop {
         margin: 0 0 0 8rem;
         width: 50vw;
-      //  border-right: 1px solid $mercury;
     }
 
     &__title {
@@ -109,7 +108,6 @@
                 @include desktop {
                     width: 28vw;
                 }
-
             }
         }
 

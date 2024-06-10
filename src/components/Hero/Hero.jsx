@@ -1,8 +1,8 @@
 import './Hero.scss';
-function Hero(details) {
+function Hero({ videoDetails }) {
     return (
         <div className="hero">
-            <video className="hero__video" poster={details[1].image} controls>
+            <video className="hero__video" poster={videoDetails.image} controls>
                 <source />
             </video>
         </div>
