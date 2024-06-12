@@ -25,7 +25,7 @@ const Comments = ({ comments }) => {
     return(
         <main>
             <div className="comment">
-            <h1 className="comment__title">3 Comments</h1>
+            <h2 className="comment__title">3 Comments</h2>
             <div className="comment__container">
             <div className="comment__container--image"></div>
             <form className="comment__input">
