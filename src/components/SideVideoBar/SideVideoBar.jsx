@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import "./SideVideoBar.scss";
+
 
 const SideVideoBar = ({ details, changevideoDetails }) => {
 

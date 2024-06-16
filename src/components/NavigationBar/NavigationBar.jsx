@@ -3,7 +3,7 @@ import searchImg from '../../assets/images/icons/search.svg';
 import uploadImg from '../../assets/images/icons/upload.svg';
 import './NavigationBar.scss';
 
-function NavigationBar() {  
+const NavigationBar = () => {  
     return (
       <header className="header">
         <nav className="header__navigation">

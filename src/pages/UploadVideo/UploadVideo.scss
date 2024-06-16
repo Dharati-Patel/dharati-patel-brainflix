@@ -1,0 +1,191 @@
+@import '../../styles/partials/colors';
+@import '../../styles/partials/fonts';
+@import '../../styles/partials/mixins';
+
+.upload {
+    margin: 1rem 1rem;
+    
+    @include tablet {
+        margin: 1.5rem;
+    }
+
+    @include desktop {
+        margin: 0 8rem;
+    }
+
+    &__title {
+        font-family: "AvenirNext_bold", sans-serif;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        color: $BrainFlix-Black;
+        margin: 1.5rem 0 1rem 0;
+    }
+    &__container {
+        @include tablet {
+            border-top: 1px solid $mercury;
+        }
+        &--video {
+            &-subtitle {
+                font-family: "AvenirNext_demi", sans-serif;;
+                font-size: 0.8125rem;
+                line-height: 1.25rem;
+                color: $silver;
+                margin: 0 0 .5rem 0;
+
+                @include tablet {
+                    margin: 1rem 0 .5rem 0;
+                }
+            }
+
+            &-main {
+                height: 153px;
+                width: 288px;
+                background-image: url("../../assets/images/Upload-video-preview.jpg");
+                background-size: cover;
+                background-position: bottom;
+                background-repeat: no-repeat;
+                border-radius: .3125rem;
+                margin: 0 0 1.5rem 0;
+            }
+        }
+
+        &--form {
+            display: flex;
+            flex-direction: column;
+
+            &-title {
+                font-family: "AvenirNext_demi", sans-serif;
+                font-size: .8125rem;
+                line-height: 1.25rem;
+                color: $silver;
+                margin: 0 0 .5rem 0;
+            }
+
+            &-text {
+                font-family: "AvenirNext_regular", sans-serif;
+                font-size: 0.8125rem;
+                color: $BrainFlix-DarkBlack;
+                border: 1px solid $silver;
+                border-radius: 0.25rem;
+                width: 90vw;
+                height: 5vh;
+                background-color: $alabaster;
+                border-color: $silver;
+                padding: 0.75rem;
+                resize: none;
+                margin: 0 0 1rem 0;
+
+                &:focus {
+                    border: 2px solid $BrainFlix-Blue; 
+                }
+
+                @include tablet {
+                    width: 93.7vw;
+                }
+            }
+
+            &-description {
+                font-family: "AvenirNext_demi", sans-serif;
+                font-size: .8125rem;
+                line-height: 1.25rem;
+                color: $silver;
+                margin: 0 0 .5rem 0;
+            }
+
+            &-comment {
+                font-family: "AvenirNext_regular", sans-serif;
+                font-size: 0.8125rem;
+                color: $BrainFlix-DarkBlack;
+                border: 1px solid $silver;
+                border-radius: 0.25rem;
+                width: 90vw;
+                height: 12vh;
+                background-color: $alabaster;
+                padding: 0.75rem;
+                resize: none;
+                margin: 0;
+
+                &:focus {
+                    border: 2px solid $BrainFlix-Blue; 
+                }
+
+                @include tablet {
+                    width: 93.7vw;
+                }
+            }
+
+            &-button{
+                display: flex;
+                flex-direction: column;
+                
+
+                @include tablet {
+                    flex-direction: row-reverse;
+                    border-top: 1px solid $mercury;
+                    margin: 1rem 0 0 0;
+                    
+                }
+
+                &-publish {
+                    display: flex;
+                    background-color: $BrainFlix-Blue;
+                    border-style: none;
+                    height: 2.5rem;
+                    border-radius: 0.25rem;
+                    margin: 1.5rem 0 1.5rem 0;
+        
+                    @include tablet {
+                        margin-top: 1rem;
+                        width: 20vw;
+                    }
+        
+                    @include desktop {
+                        width: 14vw;
+                        margin-right: 1rem;
+                    }
+        
+                    &-img {
+                        padding: 0.6rem;
+                    }
+        
+                    &-one {
+                        font-family: "AvenirNext_demi", sans-serif;
+                        color: $white;
+                        text-align: center;
+                        padding: 0.8rem 1rem 0 2rem;
+                        height: 1rem;
+                        background-color: $BrainFlix-Blue;
+                        border: none;
+                        outline-width: 0; 
+                        margin: 0 0 0 2.6rem; 
+
+                        @include tablet {
+                            width: 8vw;
+                            margin: 0;
+                            padding: 0.8rem 0 0 0.8rem;
+                        }
+                    }  
+                }
+                &-cancel {
+                    font-family: "AvenirNext_demi", sans-serif;
+                    font-size: 0.8125rem;
+                    line-height: 1.25rem;
+                    border-style: none;
+                    height: 2.5rem;
+                    border-radius: 0.25rem;
+                    outline-width: 0;
+                    color: $BrainFlix-Blue;
+                    background-color: $white;
+                    text-align: center;
+                    width: 90vw;
+                    
+                    @include tablet {
+                        margin: 1rem 1rem 0 0;
+                        width: 20vw;
+                    }
+                }
+            }
+           
+        }
+    }
+}

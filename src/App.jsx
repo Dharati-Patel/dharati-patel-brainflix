@@ -1,14 +1,16 @@
-import details from './data/video-details.json';
 import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.scss';
 import NavigationBar from './components/NavigationBar/NavigationBar';
 import Hero from './components/Hero/Hero';
 import Main from './components/Main/Main';
 import Comments from './components/Comments/Comments';
 import SideVideoBar from './components/SideVideoBar/SideVideoBar';
+import UploadVideo from './pages/UploadVideo/UploadVideo';
 import { fetchVideoList, fetchVideoDetails } from './utils/api-utils';
 
-function App() {
+
+const App = () => {
   const [videoDetails, setVideoDetails] = useState(null);
   const [videoList, setVideoList] = useState([]);
   const [error, setError] = useState(null);
@@ -61,6 +63,9 @@ function App() {
           <SideVideoBar details={filterDetails} changevideoDetails={changevideoDetails} />
         </div>
       </div>
+      
+        
+      
     </div>
   );
 }
