@@ -1,9 +1,10 @@
 import './Hero.scss';
-function Hero({ videoDetails }) {
+
+const Hero = ({ videoDetails }) => {
     return (
         <div className="hero">
             <video className="hero__video" poster={videoDetails.image} controls>
-                <source />
+                <source src={videoDetails.video} type="video/mp4" />
             </video>
         </div>
     );
