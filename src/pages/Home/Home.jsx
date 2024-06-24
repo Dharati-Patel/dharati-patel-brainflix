@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-//import { useNavigate } from 'react-router-dom';
 import Hero from "../../components/Hero/Hero";
 import Main from "../../components/Main/Main";
 import Comments from "../../components/Comments/Comments";
@@ -10,7 +9,6 @@ const Home = () => {
   const [videoDetails, setVideoDetails] = useState(null);
   const [videoList, setVideoList] = useState([]);
   const [error, setError] = useState(null);
- // const navigate = useNavigate();
 
   useEffect(() => {
     const loadVideos = async () => {

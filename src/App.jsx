@@ -10,8 +10,7 @@ const App = () => {
     <BrowserRouter>
       <NavigationBar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/videos" element={<Home />} />
+        <Route path="/" element={<VideoDetails />} />
         <Route path="/videos/:videoId" element={<VideoDetails />} />
         <Route path="/upload" element={<UploadVideo />} />
       </Routes>

@@ -2,6 +2,10 @@
 @import '../../styles/partials/fonts';
 @import '../../styles/partials/mixins';
 
+.upload_form{
+    border-top: 1px solid $mercury;
+}
+
 .upload {
     margin: 1rem 1rem;
     
@@ -24,7 +28,12 @@
         @include tablet {
             border-top: 1px solid $mercury;
         }
+
+        @include desktop {
+            display: flex;
+        }
         &--video {
+
             &-subtitle {
                 font-family: "AvenirNext_demi", sans-serif;;
                 font-size: 0.8125rem;
@@ -38,8 +47,8 @@
             }
 
             &-main {
-                height: 153px;
-                width: 288px;
+                height: 9.5625rem;
+                width: 18rem;
                 background-image: url("../../assets/images/Upload-video-preview.jpg");
                 background-size: cover;
                 background-position: bottom;
@@ -59,28 +68,37 @@
                 line-height: 1.25rem;
                 color: $silver;
                 margin: 0 0 .5rem 0;
+
+                @include desktop {
+                    margin: 1rem 1rem 0.5rem 1rem;
+                }
             }
 
             &-text {
                 font-family: "AvenirNext_regular", sans-serif;
                 font-size: 0.8125rem;
                 color: $BrainFlix-DarkBlack;
-                border: 1px solid $silver;
+                border: 1px solid $mercury;
                 border-radius: 0.25rem;
                 width: 90vw;
                 height: 5vh;
                 background-color: $alabaster;
-                border-color: $silver;
                 padding: 0.75rem;
                 resize: none;
                 margin: 0 0 1rem 0;
 
                 &:focus {
                     border: 2px solid $BrainFlix-Blue; 
+                    outline-width: 0;
                 }
 
                 @include tablet {
                     width: 93.7vw;
+                }
+                @include desktop {
+                    width: 56vw;
+                    margin-left: 1rem;
+                    height: 3.5vh;
                 }
             }
 
@@ -90,13 +108,17 @@
                 line-height: 1.25rem;
                 color: $silver;
                 margin: 0 0 .5rem 0;
+
+                @include desktop {
+                    margin: 0 1rem;
+                }
             }
 
             &-comment {
                 font-family: "AvenirNext_regular", sans-serif;
                 font-size: 0.8125rem;
                 color: $BrainFlix-DarkBlack;
-                border: 1px solid $silver;
+                border: 1px solid $mercury;
                 border-radius: 0.25rem;
                 width: 90vw;
                 height: 12vh;
@@ -107,10 +129,17 @@
 
                 &:focus {
                     border: 2px solid $BrainFlix-Blue; 
+                    outline-width: 0;
                 }
 
                 @include tablet {
                     width: 93.7vw;
+                }
+
+                @include desktop {
+                    width: 56vw;
+                    margin-left: 1rem;
+                    height: 7.5vh;
                 }
             }
 
@@ -121,7 +150,6 @@
 
                 @include tablet {
                     flex-direction: row-reverse;
-                    border-top: 1px solid $mercury;
                     margin: 1rem 0 0 0;
                     
                 }
