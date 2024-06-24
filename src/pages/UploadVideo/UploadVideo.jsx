@@ -1,15 +1,36 @@
 import "./UploadVideo.scss";
 import publishImg from "../../assets/images/icons/publish.svg";
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+const API_URL = import.meta.env.VITE_API_URL;
 
 const UploadVideo = () => {
+
+  const navigate = useNavigate();
+
+  const postVideoDetails = async (eventRec) => {
+    try {
+      const response = await axios.post(`${API_URL}videos`, {
+        title: eventRec.target.name.value,
+        channel: eventRec.target.comment.value,
+      });
+      console.log(response);
+      eventRec.target.reset();
+    } catch (error) {
+      console.log("Error", err);
+    }
+  };
   
-    const handleSubmit = (event) => {
-      event.preventDefault();
-    };
-  
-    return (
-      <section className="upload">
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    postVideoDetails(event);
+    navigate('/');
+  };
+
+  return (
+    <section className="upload_form">
+      <div className="upload">
         <h1 className="upload__title">Upload Video</h1>
         <div className="upload__container">
           <div className="upload__container--video">
@@ -52,8 +73,9 @@ const UploadVideo = () => {
             </div>
           </form>
         </div>
-      </section>
-    );
-  };
-  
-  export default UploadVideo;
+      </div>
+    </section>
+  );
+};
+
+export default UploadVideo;

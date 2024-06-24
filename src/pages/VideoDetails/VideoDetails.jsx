@@ -6,7 +6,7 @@ import Comments from "../../components/Comments/Comments";
 import SideVideoBar from "../../components/SideVideoBar/SideVideoBar";
 import { fetchVideoList, fetchVideoDetails } from "../../utils/api-utils";
 
-const VideoDetails = () => {
+const VideoPage = () => {
   const { videoId } = useParams();
   const [videoDetails, setVideoDetails] = useState(null);
   const [videoList, setVideoList] = useState([]);
@@ -17,8 +17,14 @@ const VideoDetails = () => {
       try {
         const videos = await fetchVideoList();
         setVideoList(videos);
-        const details = await fetchVideoDetails(videoId);
-        setVideoDetails(details);
+        
+        if (videoId) {
+          const details = await fetchVideoDetails(videoId);
+          setVideoDetails(details);
+        } else if (videos.length > 0) {
+          const details = await fetchVideoDetails(videos[0].id);
+          setVideoDetails(details);
+        }
       } catch (err) {
         setError(err.message);
       }
@@ -52,4 +58,4 @@ const VideoDetails = () => {
   );
 };
 
-export default VideoDetails;
+export default VideoPage;
